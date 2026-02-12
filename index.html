@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HEM TOURS LTD | Transport &amp; Car Rental Mauritius</title>
+    <meta name="description" content="HEM TOURS LTD — reliable transport and car rental in Mauritius. Airport transfers, island sightseeing, hotel transfers and guided tours." />
+    <meta name="theme-color" content="#0a6d9e" />
+    <meta property="og:title" content="HEM TOURS LTD | Transport &amp; Car Rental Mauritius" />
+    <meta property="og:description" content="Reliable airport transfers, island tours and car rentals across Mauritius." />
+    <meta property="og:type" content="website" />
+    <style>
+         :root {
+            --brand: #0a6d9e;
+            --whatsapp: #25D366;
+            --bg: #f4f6f8;
+            --card-bg: #fff;
+            --text: #222;
+            --radius: 12px;
+            --max-width: 1200px;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased
+        }
+        
+        header {
+            background: url("headers.png") center/cover no-repeat;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: #fff;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .55);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+        
+        .header-content h1 {
+            font-size: 2.4rem;
+            margin: .25rem 0
+        }
+        
+        .header-content p {
+            font-size: 1.1rem;
+            margin: .25rem 0 1rem
+        }
+        
+        .btn {
+            background: var(--brand);
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block
+        }
+        
+        .btn:focus {
+            outline: 3px solid rgba(10, 109, 158, .25);
+            outline-offset: 2px
+        }
+        
+        section {
+            max-width: var(--max-width);
+            margin: 2rem auto;
+            padding: 1rem
+        }
+        
+        .card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .06)
+        }
+        
+        h2 {
+            text-align: center;
+            color: var(--brand);
+            margin-bottom: 1rem
+        }
+        
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px
+        }
+        
+        .activity img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px
+        }
+        
+        .activity h4 {
+            text-align: center;
+            margin: .6rem 0
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            background: var(--whatsapp);
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 16px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            text-decoration: none;
+            font-weight: 700;
+            z-index: 999
+        }
+        
+        .whatsapp-btn img {
+            width: 22px;
+            height: 22px
+        }
+        
+        .booking-form input,
+        .booking-form select,
+        .booking-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border: 1px solid #cfcfcf;
+            font-size: 1rem
+        }
+        
+        .booking-form button {
+            background: var(--whatsapp);
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 30px;
+            font-size: 1.05rem;
+            cursor: pointer
+        }
+        
+        footer {
+            background: var(--brand);
+            color: #fff;
+            text-align: center;
+            padding: 16px
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+        
+        @media (max-width:700px) {
+            .row {
+                grid-template-columns: 1fr
+            }
+            .header-content h1 {
+                font-size: 1.8rem
+            }
+            .header-content p {
+                font-size: 1rem
+            }
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0
+        }
+        
+        a[target="_blank"] {
+            text-decoration: underline
+        }
+        
+        .focus-ring:focus {
+            outline: 3px solid rgba(37, 211, 102, .25);
+            outline-offset: 2px
+        }
+        /* Service tile specific: meet-the-owner */
+        
+        .owner-avatar {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+        
+        .owner-caption {
+            text-align: center;
+            margin-top: .5rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header role="banner">
+        <div class="header-content">
+            <h1>HEM TOURS LTD</h1>
+            <p>Your Trusted Local Transport &amp; Car Rental Partner in Mauritius</p>
+            <button class="btn" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book via WhatsApp</button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+
+            <div class="card" aria-labelledby="about-mauritius">
+                <h2 id="about-mauritius">About Mauritius</h2>
+                <p>Discover Mauritius, an island paradise where luxury meets nature. Wake up to soft ocean breezes, unwind on immaculate white-sand beaches, and indulge in world-class resorts overlooking crystal-clear lagoons. From serene spa retreats to
+                    sunset cruises and fine island cuisine, Mauritius is the ultimate destination for relaxation, elegance, and unforgettable moments.
+                </p>
+                <p>Mauritius is a dream destination for romance. Walk hand in hand along golden beaches, watch the sun melt into the ocean, and share magical moments beneath palm trees and starlit skies. With its intimate lagoons, breathtaking scenery, and
+                    warm island charm, Mauritius is the perfect setting for love, honeymoons, and lifelong memories.For the adventurous soul, Mauritius offers endless excitement. Swim with dolphins, explore hidden waterfalls, hike through lush rainforests,
+                    and discover colorful coral reefs beneath turquoise waters. Blending thrilling experiences with stunning natural beauty, Mauritius invites you to explore, discover, and create unforgettable stories.</p>
+            </div>
+
+            <div class="card" aria-labelledby="about-hem">
+                <h2 id="about-hem">About HEM TOURS LTD</h2>
+                <p>Our office is conveniently located at Martin Luther King Street, Goodlands. We provide reliable transport services across the island, driven by professional and experienced chauffeurs who ensure your comfort and safety at all times. In
+                    addition, we offer car rental services, giving you the freedom to explore Mauritius at your own pace. Whether you choose a chauffeured tour or a rental vehicle, HEM TOURS LTD is your trusted partner for island travel.</p>
+                <p>To ensure transparency and build trust with our customers, all payments are made only after the services have been successfully provided. This guarantees peace of mind and reflects our commitment to honesty, reliability, and customer satisfaction.</p>
+            </div>
+
+            <div class="card" aria-labelledby="services">
+                <h2 id="services">Our Services</h2>
+                <div class="activity-grid">
+                    <div class="activity">
+                        <!-- Airport transfer image -->
+                        <img src="airport-transfer.jpg" alt="Airport transfer vehicle parked at Mauritius airport" loading="lazy">
+                        <h4>✈️ Airport Transfers</h4>
+                        <p>Comfortable and punctual airport arrival and departure transfers. We monitor flight schedules for smooth connections.</p>
+                    </div>
+
+                    <div class="activity">
+                        <!-- Island tour image -->
+                        <img src="island-tour.jpg" alt="Island sightseeing tour bus on a coastal road" loading="lazy">
+                        <h4>🏝️ Island Sightseeing Tours</h4>
+                        <p>Guided sightseeing tours covering beaches, waterfalls, viewpoints and cultural landmarks.</p>
+                    </div>
+
+                    <div class="activity">
+                        <!-- Hotel transfer image -->
+                        <img src="hotel-transfer.jpg" alt="Hotel transfer car in front of resort" loading="lazy">
+                        <h4>🏨 Hotel Transfers</h4>
+                        <p>Reliable transport between hotels, resorts, villas and attractions throughout the island.</p>
+                    </div>
+
+                    <div class="activity">
+                        <!-- Car rental image -->
+                        <img src="car-rental.jpg" alt="Rental car on a scenic route in Mauritius" loading="lazy">
+                        <h4>🚗 Car Rentals</h4>
+                        <p>Well-maintained vehicles available for daily or weekly rental, with or without a driver.</p>
+                    </div>
+
+                    <!-- Meet the owner/driver tile: updated name to Vikram -->
+                    <div class="activity">
+                        <img src="driver.jpg" alt="Vikram, owner and driver at HEM TOURS LTD, smiling in professional attire against a neutral background" class="owner-avatar" loading="lazy">
+                        <h4 class="owner-caption ">👋 Meet Your Driver — Vikram</h4>
+                        <p style="text-align:center;margin-top:.25rem ">Owner &amp; driver with local experience — friendly, safe and happy to recommend the best spots!</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card " aria-labelledby="top-activities ">
+                <h2 id="top-activities ">Top Activities in Mauritius</h2>
+                <div class="activity-grid ">
+                    <div class="activity "><img src="ile-aux-cerfs.jpg" alt="Île aux Cerfs beach " loading="lazy ">
+                        <h4>Île aux Cerfs Boat Tours</h4>
+                    </div>
+                    <div class="activity "><img src="eau-bleue.jpg" alt="Eau Bleue Waterfall " loading="lazy ">
+                        <h4>Eau Bleue Waterfalls</h4>
+                    </div>
+                    <div class="activity "><img src="le-morne.jpg" alt="Le Morne Brabant " loading="lazy ">
+                        <h4>Climb Le Morne Brabant</h4>
+                    </div>
+                    <div class="activity ">
+                        <img src="7-cascades.jpg" alt="Seven Cascades " loading="lazy ">
+                        <h4>7 Cascades Hiking</h4>
+                    </div>
+                    <div class="activity "><img src="pont-naturel.jpg" alt="Pont Naturel " loading="lazy ">
+                        <h4>Pont Naturel Scenic Hike</h4>
+                    </div>
+                    <div class="activity "><img src="ile-aux-benitiers.jpg" alt="Île aux Bénitiers and Crystal Rock " loading="lazy ">
+                        <h4>Île aux Bénitiers &amp; Crystal Rock</h4>
+                    </div>
+                    <div class="activity "><img src="caudan.jpg" alt="Caudan Waterfront " loading="lazy ">
+                        <h4>Shop &amp; Dine at Caudan Waterfront</h4>
+                    </div>
+                    <div class="activity "><img src="Explore-Gris-Gris-Beach.jpg" alt="Gris Gris Beach waves " loading="lazy ">
+                        <h4>Explore Gris Gris Beach</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moved: People Also Ask is now BELOW Top Activities -->
+            <div class="card " aria-labelledby="faq ">
+                <h2 id="faq ">People Also Ask</h2>
+                <p><strong>What is Mauritius best known for?</strong><br>Mauritius is renowned for its stunning white-sand beaches, luxury resorts, unique flora and fauna, and its historical association with the extinct dodo bird. The island is also famous
+                    for the spectacular underwater “waterfall” illusion seen off the coast of Le Morne.</p>
+
+                <p><strong>How many days are enough for Mauritius?</strong><br>A stay of 7–14 days allows visitors to fully enjoy the beaches, water sports, scenic island tours, hiking opportunities, and cultural attractions such as the UNESCO World Heritage
+                    sites of Aapravasi Ghat and Le Morne Brabant.</p>
+
+                <p><strong>What do people do in Mauritius?</strong><br>Swimming, scuba diving, boating, dolphin watching, rainforest hikes, and tasting authentic Mauritian cuisine.</p>
+
+                <p><strong>Is there a dress code?</strong><br>No strict dress code. Beachwear is acceptable. Some hotels may require smart-casual attire for dining.</p>
+
+                <p><strong>Can you drink alcohol in Mauritius?</strong><br>Yes — bars, hotels and restaurants serve alcohol. Legal drinking age: 18.</p>
+
+                <p><strong>Does Mauritius have mosquitoes?</strong><br>Yes, especially in forests. They are not malaria carriers locally, but repellent is recommended.</p>
+            </div>
+
+            <div class="card " aria-labelledby="location ">
+                <h2 id="location ">Our Location</h2>
+                <iframe title="Map to Martin Luther King Street Goodlands " src="https://www.google.com/maps?q=Martin%20Luther%20King%20Street%20Goodlands%20Mauritius&output=embed " width="100% " height="350 " style="border:0
+                            " allowfullscreen loading="lazy "></iframe>
+            </div>
+
+            <form class="card booking-form " id="booking " aria-labelledby="book-title " onsubmit="return sendWhatsApp(event) ">
+                <h2 id="book-title ">Book via WhatsApp</h2>
+
+                <label for="name ">Your Name</label>
+                <input id="name " name="name " type="text " placeholder="Full name " required aria-required="true ">
+
+                <div class="row ">
+                    <div>
+                        <label for="phone ">Phone Number</label>
+                        <input id="phone " name="phone " type="tel " placeholder="+230 5254 3368 " pattern="^\+?\d[\d\s-]{6,}$ " required aria-required="true ">
+                    </div>
+
+                    <div>
+                        <label for="service ">Service</label>
+                        <select id="service " name="service " required>
+              <option value=" ">Choose a service</option>
+              <option>Car Rental</option>
+              <option>Airport Transfer</option>
+              <option>Island Tour</option>
+              <option>Adventure &amp; Hiking</option>
+            </select>
+                    </div>
+                </div>
+
+                <label for="date ">Date</label>
+                <input id="date " name="date " type="date ">
+
+                <label for="message ">Additional details</label>
+                <textarea id="message " name="message " rows="4 " placeholder="Pick-up location, number of passengers, luggage, flight number... "></textarea>
+
+                <button type="submit " class="focus-ring ">📲 Book via WhatsApp</button>
+            </form>
+
+            <div class="card " aria-labelledby="contact ">
+                <h2 id="contact ">Contact Us</h2>
+                <p>📞 <a href="tel:+23052543368 ">+230 5254 3368</a><br>📧 <a href="mailto:Hemtoursltd@hotmail.com ">Hemtoursltd@hotmail.com</a></p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer role="contentinfo ">
+        © 2026 HEM TOURS LTD | Transport &amp; Car Rental Mauritius
+    </footer>
+
+    <a class="whatsapp-btn " id="wa-floating " href="https://wa.me/23052543368 " target="_blank " rel="noopener noreferrer " aria-label="Open WhatsApp chat with HEM TOURS LTD ">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg " alt=" ">
+        <span class="sr-only ">WhatsApp</span> WhatsApp
+    </a>
+
+    <script>
+        function sendWhatsApp(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const message = document.getElementById('message').value.trim();
+
+            // basic validation
+            if (!name) {
+                alert('Please enter your name.');
+                document.getElementById('name').focus();
+                return false;
+            }
+            if (!phone) {
+                alert('Please enter your phone number.');
+                document.getElementById('phone').focus();
+                return false;
+            }
+            if (!service) {
+                alert('Please choose a service.');
+                document.getElementById('service').focus();
+                return false;
+            }
+
+            // Construct message with real newlines and encode once
+            let text = `Hello HEM TOURS LTD,
+Name: ${name}
+Phone: ${phone}
+Service: ${service}`;
+            if (date) text += `\nDate: ${date}`;
+            if (message) text += `\nDetails: ${message}`;
+
+            const encoded = encodeURIComponent(text);
+            const phoneNumber = '23052543368'; // no '+' or spaces
+            const url = `https://wa.me/${phoneNumber}?text=${encoded}`;
+
+            // open a new window/tab and null the opener for security
+            const newWin = window.open(url, '_blank');
+            if (newWin) newWin.opener = null;
+            return false;
+        }
+    </script>
+</body>
+
+</html>
